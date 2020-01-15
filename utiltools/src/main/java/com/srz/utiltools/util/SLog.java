@@ -9,10 +9,13 @@ public class SLog {
     static String methodName;//方法名
     static int lineNumber;//行数
 
-    private static boolean isDebug;
+    private static boolean isDebugs;
 
-    public static void isDebug(boolean isDebugs){
-        isDebug =isDebugs;
+    private SLog(){
+        throw new NullPointerException("null");
+    }
+    public static void isDebug(boolean isDebug){
+        isDebugs =isDebug;
     }
 
 
@@ -26,7 +29,7 @@ public class SLog {
 
 
     private static boolean isDebuggable() {
-        return isDebug;
+        return isDebugs;
     }
 
     private static String createLog(String log) {

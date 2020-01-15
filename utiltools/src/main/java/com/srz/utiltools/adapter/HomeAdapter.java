@@ -1,14 +1,11 @@
-package com.srz.utiltools.base;
+package com.srz.utiltools.adapter;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.content.Context;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import com.srz.utiltools.R;
+
+import java.util.List;
 
 /**
  * //                    .::::.
@@ -37,46 +34,23 @@ import androidx.fragment.app.Fragment;
  * enough to "optimize" the code below.
  * Now close this file and go play with something else.
  * <p>
- * 2020/01/10 15:46 星期五
+ * 2020/01/15 16:59 星期三
  **/
-public abstract class BaseFragment extends Fragment {
+public class HomeAdapter extends BaseRecyclerViewAdapter<String> {
 
 
-    private View baseView;
-    private Bundle bundle;
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(getLayoutId(),container,false);
+    public HomeAdapter(List<String> listData, Context context) {
+        super(listData, context);
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        baseView = view;
-        initView();
-        loadData();
-
-
+    public int getLayoutId() {
+        return 0;
     }
 
-    public <T extends View> T findViewById(int id){
+    @Override
+    public void converView(BaseRecyclerViewHolder holder, String data, int posision) {
 
-        return baseView.findViewById(id);
+        View view = holder.getView(R.id.mViewId);
     }
-
-    protected abstract int getLayoutId();
-    protected abstract void initView();
-    protected abstract void loadData();
-
-
-    public void setBundle(Bundle bundle) {
-        this.bundle = bundle;
-    }
-    public Bundle getBundle() {
-        return bundle;
-    }
-
-
 }
