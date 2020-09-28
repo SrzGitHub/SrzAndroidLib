@@ -63,6 +63,7 @@ public abstract class BaseFragment extends Fragment {
 
     public <T extends View> T findViewById(int id){
 
+
         return baseView.findViewById(id);
     }
 

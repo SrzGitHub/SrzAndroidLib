@@ -57,6 +57,9 @@ public abstract class BaseRecyclerViewAdapter<D> extends RecyclerView.Adapter<Ba
 
     public abstract void converView(BaseRecyclerViewHolder holder, D data, int posision);
 
+    private Context getContext(){
+        return context;
+    }
 
     @NonNull
     @Override

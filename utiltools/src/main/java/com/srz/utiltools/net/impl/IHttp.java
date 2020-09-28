@@ -1,7 +1,5 @@
 package com.srz.utiltools.net.impl;
 
-import com.srz.utiltools.net.NetworkCallback;
-
 import java.util.Map;
 
 /**

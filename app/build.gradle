@@ -27,4 +27,5 @@ dependencies {
 
 
     implementation project(path: ':utiltools')
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 }

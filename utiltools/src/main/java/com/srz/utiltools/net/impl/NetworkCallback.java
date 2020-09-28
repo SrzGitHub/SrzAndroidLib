@@ -1,4 +1,4 @@
-package com.srz.utiltools.net;
+package com.srz.utiltools.net.impl;
 
 /**
  * //                    .::::.

@@ -2,12 +2,11 @@ package com.srz.utiltools.net;
 
 import com.google.gson.Gson;
 import com.srz.utiltools.BaseApplication;
-import com.srz.utiltools.R;
 import com.srz.utiltools.net.impl.IHttp;
+import com.srz.utiltools.net.impl.NetworkCallback;
 import com.srz.utiltools.net.ssl.SSLContextMannage;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
